@@ -1,6 +1,6 @@
 import type { Camera, DetectionPayload } from '../types'
 
-const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL as string | undefined) ?? 'http://localhost:8000'
+const BACKEND_URL = ((import.meta.env.VITE_BACKEND_URL as string | undefined) ?? 'http://localhost:8000').replace(/\/$/, '')
 const WS_URL = BACKEND_URL.replace(/^http/, 'ws')
 
 export async function listCamerasFromBrowser(): Promise<Camera[]> {
