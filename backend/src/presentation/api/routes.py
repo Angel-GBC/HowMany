@@ -20,7 +20,8 @@ def make_router(
     @router.post("/session/start", response_model=StartSessionResponse)
     def start_session(body: StartSessionRequest):
         if session_store.get("active"):
-            raise HTTPException(status_code=409, detail="Ya hay una sesión activa.")
+            stop_session_uc.execute(session_store["active"])
+            session_store["active"] = None
         session = start_session_uc.execute(body.camera_id)
         session_store["active"] = session
         return StartSessionResponse(

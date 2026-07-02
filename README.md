@@ -1,3 +1,7 @@
+# Link Desplegado Frontend
+
+https://howmany-frontend.vercel.app/
+
 # HowMany?
 
 Conteo de personas en tiempo real — **100% gratuito**, sin nada local.
