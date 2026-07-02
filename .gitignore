@@ -1,0 +1,26 @@
+# Entorno virtual Python
+.venv/
+
+# Modelo YOLO descargado
+*.pt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Variables de entorno locales
+frontend/.env
+
+# VSCode
+.vscode/
+
+# Repo del HF Space (carpeta clonada de HuggingFace)
+HowMany/
+
+# Claude Code Chat
+.claude
