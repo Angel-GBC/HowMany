@@ -6,7 +6,7 @@ import { VideoCanvas } from './components/VideoCanvas'
 import { useRecordingSession } from './hooks/useRecordingSession'
 
 export default function App() {
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null) as React.RefObject<HTMLVideoElement>
   const { cameras, session, history, detections, loadCameras, start, stop } =
     useRecordingSession(videoRef)
 

@@ -17,7 +17,7 @@ const INITIAL_SESSION: SessionState = {
 
 const FRAME_INTERVAL_MS = 50
 
-export function useRecordingSession(videoRef: React.RefObject<HTMLVideoElement | null>) {
+export function useRecordingSession(videoRef: React.RefObject<HTMLVideoElement>) {
   const [cameras, setCameras] = useState<Camera[]>([])
   const [session, setSession] = useState<SessionState>(INITIAL_SESSION)
   const [history, setHistory] = useState<HistoryEntry[]>([])

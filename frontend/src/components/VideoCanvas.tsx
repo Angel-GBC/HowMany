@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import type { BoundingBox } from '../types'
 
 interface Props {
-  videoRef: React.RefObject<HTMLVideoElement | null>
+  videoRef: React.RefObject<HTMLVideoElement>
   detections: BoundingBox[]
 }
 
